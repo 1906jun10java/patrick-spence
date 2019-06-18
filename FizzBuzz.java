@@ -1,33 +1,30 @@
 package FizzBuzz;
 
+import java.util.ArrayList;
+
 public class FizzBuzz {
 
-
 	public static void fizzBuzzBasic() {
-		/*
-		 * creating an Array, that calls the int values 
-		 * 1-100.
-		 */ 
-		int [] fizzBuzz = new int[100]; //instantiating the array
-		for (int i = 0; i <= 100; i++) {
-			System.out.println(i);
+
+		for (int i = 1; i <= 100; i++) {
 			/*
 			 * modulus operator is used not to create the array
 			 */
-			if(i % 3 == 0) {
-				System.out.println("Fizz");
+			if(i % 15 == 0) {
+				System.out.print("Fizzbuzz, ");
 			}else if(i % 5 == 0) {
-				System.out.println("Buzz");
-			}else if(i % 3 == 0 || i % 5 == 0)
-				if(i % 3 == 0 && i % 5 == 0){
-					System.out.println("FizzBuzz");
-				}else {
-					System.out.println(i+", ");
-				}
+				System.out.print("Buzz, ");
+			}else if(i % 3 == 0){
+				System.out.print("Fizz, ");
+			}else {
+				System.out.print(i+", ");
+			}
 		}
 	}
 
 }
+
+
 
 
 
