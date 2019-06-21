@@ -5,14 +5,14 @@ import java.util.Scanner;
 public class Thursday {
 
 	public static void main(String[] args) {
-		
+		/*
 		Scanner word = new Scanner(System.in);
 		System.out.println("Enter a String w/ 9 letters: ");
 		String str = word.nextLine();
 		System.out.println("Enter a letters contained of said String between 4 and 8: ");
 		System.out.println("Remember, Java indexes at 0, so 0...8 = 9");
 		String substr = word.nextLine();
-		
+		*/
 		//String str = "Hamburger";
 		//String substr = "urge";
 		/*
@@ -25,8 +25,8 @@ public class Thursday {
 		//System.out.println("The String length is: "+a+" the last index of String is : "+b); 
 		//System.out.println("The String length is: "+c+" the last index of String is : "+d); 
 
-		containsSubString(str, substr);
-		//System.out.println("Triangle: "+triangle(5));
+		//containsSubString(str, substr);
+		System.out.println("Triangle: "+triangle(5));
 	}
 	public static boolean containsSubString(String str, String substr) {
 		if(str.contains(str.substring(4, 8))==(substr.contains(str.substring(4,8)))) {
@@ -41,7 +41,7 @@ public class Thursday {
 		if(numbers == 0) {
 			return 1; 
 		} else { 
-			return numbers * triangle(numbers - 1);
+			return numbers + triangle(numbers - 1);
 			
 		}
 	}
