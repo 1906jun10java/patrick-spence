@@ -7,11 +7,11 @@ public class Employee {
 	 * This is the same for the USERNAME AND PASSWORD.
 	 */
 	static final String Driver = "oracle.jdbc.driver.OracleDriver";
-	static final String Url= "jdbc:oracle:thin:@ps-java-2019.clnr7kehhybf.us-east-1.rds.amazonaws.com";
+	static final String Url= "jdbc:oracle:thin:@ps-java-2019.clnr7kehhybf.us-east-1.rds.amazonaws.com:1521:ORCL";
 	static final String Usr= "PS_Java_19";
 	static final String Password= "Revature";
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws SQLException {
 		Connection conn = null;
 		PreparedStatement ps = null;
 		try {
@@ -20,19 +20,19 @@ public class Employee {
 			conn = DriverManager.getConnection(Url,Usr,Password); 
 			//creating a prepared statement to insert a new EMPLOYEE2
 			//??? in the parameters are place holders
-			String sql = "INSERT INTO EMPLOYEE2 VALUES(EMPLOYEE_ID=?,EMP_FIRSTNAME=?, EMP_LASTNAME=?,DEPARTMENT_ID=?,SALARY=?,EMP_EMAIL=?)";
+			String sql = "INSERT INTO EMPLOYEE2_ VALUES(EMPLOYEE2_SEQUENCE.NEXTVAL,?,?,?,?,?)";
 			ps = conn.prepareStatement(sql); 
 			//setting the parameters for the prepareStatement
 			//([index], [the information input based on datatype])
-			ps.setInt(1, 7);
-			ps.setString(2, "Joseph");
-			ps.setString(3,"Stalin" );
-			ps.setInt(4, 3);
-			ps.setInt(5, 29000);
-			ps.setString(6,"Stallon_da_Stalin@gmail.com" );
+	
+			ps.setString(1, "Joseph");
+			ps.setString(2,"Stalin" );
+			ps.setInt(3, 3);
+			ps.setInt(4, 29000);
+			ps.setString(5,"Stallon_da_Stalin@gmail.com" );
 			ps.executeUpdate();
 
-			sql ="SELECT * FROM EMPLOYEE2";
+			sql ="SELECT * FROM EMPLOYEE2_";
 			ResultSet rs = ps.executeQuery(sql);
 
 			while(rs.next()){
