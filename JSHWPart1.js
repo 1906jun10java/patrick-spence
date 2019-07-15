@@ -26,8 +26,9 @@ function sortArrays(numbArrays){
 }
 //factorial at nth number 
 function returnFactorial(num1){
-//body
+return num1* factorialize(num1-1);
 }
+factorialize(5); 
 //rotate the Array nth time
 function rotateArrayLeft(a1){
     let a1 =[1,2,3,4,5];
