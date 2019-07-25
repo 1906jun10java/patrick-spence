@@ -4,13 +4,110 @@
   <!-- setting up the pairs between the routes, to different servlets -->
  <!--in this element, we declare our servlet to the web container -->
 	<servlet>
+	<description></description>
+		<display-name>CompanyLogin</display-name>
 		<servlet-name>CompanyLogin</servlet-name>
-		<servlet-class>Project1.CompanyLogin</servlet-class>
+		<servlet-class>com.project1.servlets.CompanyLogin</servlet-class>
 	</servlet>
 <!--in this element, we map the servlet to the url patter --> 
 
 	<servlet-mapping>
 		<servlet-name>CompanyLogin</servlet-name>
-		<url-pattern>/companyLogin</url-pattern>
+		<url-pattern>/companylogin</url-pattern>
 	</servlet-mapping>
+
+<!-- Welcome Page Servlet -->
+	<servlet>
+	<description></description>
+		<display-name>WelcomePage</display-name>
+		<servlet-name>WelcomePage</servlet-name>
+		<servlet-class>com.project1.servlets.WelcomePage</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>WelcomePage</servlet-name>
+		<url-pattern>/welcomepage</url-pattern>
+	</servlet-mapping>
+
+<!-- Manager Welcome Page Servlet -->
+	<servlet>
+	<description></description>
+		<display-name>ManagerWelcome</display-name>
+		<servlet-name>ManagerWelcome</servlet-name>
+		<servlet-class>com.project1.servlets.ManagerWelcome</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ManagerWelcome</servlet-name>
+		<url-pattern>/managerwelcome</url-pattern>
+	</servlet-mapping>
+
+<!-- Logout Servlet -->
+	<servlet>
+	<description></description>
+		<display-name>CompanyLogout</display-name>
+		<servlet-name>CompanyLogout</servlet-name>
+		<servlet-class>com.project1.servlets.CompanyLogout</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CompanyLogout</servlet-name>
+		<url-pattern>/companylogout</url-pattern>
+	</servlet-mapping>	
+
+<!-- Request page Servlet -->
+	<servlet>
+	<description></description>
+		<display-name>Request</display-name>
+		<servlet-name>Request</servlet-name>
+		<servlet-class>com.project1.servlets.Request</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Request</servlet-name>
+		<url-pattern>/request</url-pattern>
+	</servlet-mapping>
+
+<!-- Submit page Servlet -->
+	<servlet>
+	<description></description>
+		<display-name>Submit</display-name>
+		<servlet-name>Submit</servlet-name>
+		<servlet-class>com.project1.servlets.Submit</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Submit</servlet-name>
+		<url-pattern>/submit</url-pattern>
+	</servlet-mapping>
+
+<!-- Session Servlet -->
+	<servlet>
+		<servlet-name>Session</servlet-name>
+		<servlet-class>com.project1.servlets.SessionServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Session</servlet-name>
+		<url-pattern>/sessionservlet</url-pattern>
+	</servlet-mapping>
+	
+<!-- Employee View Servlet -->
+	<servlet>
+		<description></description>
+		<display-name>EmployeeView</display-name>
+		<servlet-name>EmployeeView</servlet-name>
+		<servlet-class>com.project1.servlets.ViewEmployee</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EmployeeView</servlet-name>
+		<url-pattern>/employeeview</url-pattern>
+	</servlet-mapping>
+	
+<!-- Save Employee Servlet -->
+	<servlet>
+		<description></description>
+		<display-name>EmployeeSave</display-name>
+		<servlet-name>EmployeeSave</servlet-name>
+		<servlet-class>com.project1.servlets.SaveEmployee</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EmployeeSave</servlet-name>
+		<url-pattern>/employeesave</url-pattern>
+	</servlet-mapping>
+
 </web-app>

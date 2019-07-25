@@ -1,6 +1,7 @@
 package com.project1.daos;
 
 import java.beans.Statement;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -17,7 +18,7 @@ public class ManagerDaoImpl implements ManagerDao {
 	public List<Manager> getAllManager() {
 		List<Manager> man = new ArrayList<>();
 		
-		try(Connection conn = ProjectConnection.getConnection()){
+		try(Connection conn = ProjectConnection.getConnectionFromFile("database.properties")){
 			Statement stmt = (Statement) conn.createStatement();
 			ResultSet rs = ((java.sql.Statement) stmt).executeQuery("SELECT * FROM MANAGER");
 			
@@ -32,8 +33,7 @@ public class ManagerDaoImpl implements ManagerDao {
 			}
 		
 			return man; 
-		} catch (SQLException e) {
-
+		} catch (SQLException | IOException e) {
 			e.printStackTrace();
 		}
 		return null;
@@ -41,7 +41,7 @@ public class ManagerDaoImpl implements ManagerDao {
 
 	
 	public Manager getManager(int Manager_Id) {
-		try(Connection conn = ProjectConnection.getConnection()){
+		try(Connection conn = ProjectConnection.getConnectionFromFile("database.properties")){
 			PreparedStatement ps = conn.prepareStatement("SELECT * FROM MANAGER WHERE ID= ?");
 			ps.setInt(1, Manager_Id);
 			ResultSet rs = ps.executeQuery();
@@ -58,7 +58,7 @@ public class ManagerDaoImpl implements ManagerDao {
 			}
 					
 			
-		} catch (SQLException e) {
+		} catch (SQLException | IOException e) {
 			e.printStackTrace();
 		}
 		return null;

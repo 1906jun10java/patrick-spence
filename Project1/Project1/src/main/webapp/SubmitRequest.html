@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Submission Form</title>
+    </head>
+    <body>
+        <h2>Reimbursement Submission Form</h2>
+        <p>Please ensure that all information is correct, before submitting the form</p>
+        <form action="submit" method="Get">
+                <table>
+                    <div class="title">
+                        <h3>Personal Information</h3>
+                    </div>
+                        <p>Please fill out:</p>
+                        <tr><td>First Name:</td><td><input type="name" name="Employee_FN"/></td></tr>
+                        <tr><td>Last Name:</td><td><input type="name" name="Employee_LN"/></td></tr>
+                        <tr><td>Email:</td><td><input type="text" name="Employee_EM"/></td></tr>
+                </table>
+                <table>
+                    <div class="title">
+                        <h3>Reimbursement Information</h3>
+                    </div>
+                        <p>Please fillout Reimbursement Information</p>
+                        <tr><td>Reimbursement:</td><td><input type="radio" name="Reimbursements_Id"/>Food</td></tr> 
+                        <tr><td></td><td><input type="radio" name="Reimbursements_Id"/>Gas</td></tr>
+                        <tr><td></td><td><input type="radio" name="Reimbursements_Id"/>Hotel</td></tr> 
+                        <tr><td>Date:</td><td><input type="date" name="date"/></td></tr>
+                </table>
+                <table>
+                    <div class="title">
+                        <h3>Manager Information</h3>
+                    </div>
+                    <p>Fill-in Employee Information</p>
+                    <tr><td>Department/Employee Number</td><td><input type="number" name="Employee_Id"/></td></tr>
+                    <tr><td>Manager ID:</td><td><select name="Manager" style="width: 150px">
+                            <option>Miguel Lopez : 10</option>
+                            <option>Laruen Robinson : 20</option>
+                            <option>Natasha Lopez: 30</option>
+                        </select>
+                </table>
+                
+                <input type="submit" onclick="Request" value="Save Reimbursement Request"/>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Employee Table</title>
+    </head>
+    <body>
+        <h2>Employees:</h2>
+        <p>Please insert new Employee:</p>
+        <form action=""> 
+  <select name="Employee" onchange="showEmployee(this.value)">
+    <option value="">Select a Employee:</option>
+    <option value="Patrick">Patrick Spence</option>
+    <option value="Jessie">Jessie Gonzales</option>
+    <option value="Giselle">Giselle Jones</option>
+  </select>
+</form>
+<br>
+<p>ADD A NEW EMPLOYEE</p>
+        <form action="saveemployee" method="POST">
+            <table>
+                <tr><td>First Name:</td><td><input type="name" name="name"/></td></tr>
+                <tr><td>Last Name:</td><td><input type="name" name="name"/></td></tr>
+                <tr><td>Email:</td><td><input type="email" name="email"/></td></tr>
+                <tr><td>Reimbursement:</td><td><select name="Request" style="width: 150px">
+                    <option>Gas</option>
+                    <option>Food</option>
+                    <option>Hotel</option>
+                </select>
+                </td>
+                </tr>
+                <tr><td>ID:</td><td><input type="number" name="ID"/></td></tr>
+                <tr><td>Manager ID:</td><td><select name="Manager" style="width: 150px">
+                    <option>Miguel Lopez : 10</option>
+                    <option>Laruen Robinson : 20</option>
+                    <option>Natasha Lopez: 30</option>
+                </select>
+                </td>
+                </tr>
+                <tr><td><input type="submit" value="Save Employee"/></td></tr>
+            </table>
+        </form>
+        <a href="View">View List of Employees</a>
+    </body>
+    <script>
+    function showEmployee(emp) {
+        var xhttp;
+        if (emp == ""){
+            document.getElementById("Employee_Id").innerHTML = " ";
+            return; 
+        }
+  
+        xhttp = new XMLHttpRequest();
+        
+        XMLHttpRequest.onreadystatechange = function(){
+            if( this.readyState == 4 && this.status == 200){
+                document.getElementById("Employee_Id").innerHTML = this.responseText;
+            }
+        };
+        xhttp.open("Get", "getemployee.php?e="+emp, true);
+        xhttp.send();
+    }
+    </script>
+</html>
