@@ -47,6 +47,9 @@
                 opacity: 0.9;
                 color: white;
             }
+            td{
+            color: black;
+            }
         </style>
     </head>
     <body>
@@ -55,13 +58,13 @@
             <div class="collaspe navbar-collaspe">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Home</a>
+                    <a href="managerwelcome" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Schedule</a>
+                    <a href="#" class="nav-link" id="clas">Schedule</a>
                 </li>
                 <li class="nav-item nav-logout">
-                       <a href="CompanyLogout.html" class="nav-link" action="CompanyLogout">Logout</a>
+                        <a href="companylogout" class="logout" action="companylogout">Logout</a>
                 </li>
             </ul>
         </nav>
@@ -76,23 +79,23 @@
                     <a href="#" class="side-link">Manager Information</a>
                     </li>
                     <li class="dropdown dropright">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">View Employee Information
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="employeeinfo">View Employee Information
                             <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                               <li><a class="dropdown-item" href="#">Manager</a></li>
-                              <li><a class="dropdown-item" href="EmployeeTable.html">Employee</a></li>
+                              <li><a class="dropdown-item" href="employeeinfo">Employee</a></li>
                             </ul>
                     </li>
                     <li class="side-items">
-                    <a href="employeesave" class="side-link">Add Employee</a>
+                    <a href="addemployee" class="side-link">Add Employee</a>
                     <li class="side-items">
-                    <a href="submit" class="side-link">Submit Request Form</a>
+                    <a href="addrequest" class="side-link">Submit Request Form</a>
                     </li>
                     <li class="dropdown dropright">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="request">View Request
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="updaterequest">View Request
                             <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="#">View Submitted Forms</a></li>
+                              <li><a class="dropdown-item" href="updaterequest">View Submitted Forms</a></li>
                             </ul>
                     </li>
                     <li class="dropdown dropright">
@@ -107,7 +110,9 @@
                 </nav>
                 </div>  
                 <div class="col-md-9 my-col">
-                <p>This will be the content page. After clicking the side-link, the information will appear here
+                
+                <p>
+                	This will be the content page. After clicking the side-link, the information will appear here
                 so the user can view it.
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime enim placeat, nisi quasi nobis beatae, 
                 eius aspernatur accusamus illum exercitationem architecto laborum? Reprehenderit, maiores facilis 
@@ -126,6 +131,25 @@
                 placeat nemo at quae non quam tempora praesentium, vitae inventore. Excepturi asperiores ut ad atque eos, 
                 netur perspiciatis? Nulla impedit placeat alias eius nobis! Dolor!
                 </p>
+                
+                <p>   so the user can view it.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime enim placeat, nisi quasi nobis beatae, 
+                eius aspernatur accusamus illum exercitationem architecto laborum? Reprehenderit, maiores facilis 
+                quo voluptate fugiat numquam consequatur ex, itaque, eveniet ducimus cum minus esse incidunt quos 
+                minima suscipit corporis fuga cumque eligendi quidem! Dolor sequi sint voluptates, a soluta nihil at. 
+                Rem est totam eaque perferendis ullam fuga et quia impedit necessitatibus similique. Neque, quae esse 
+                alias quod a doloribus itaque, modi repellendus aliquam cumque excepturi dicta.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque eligendi dignissimos error sit! Voluptates 
+                <br>
+                eveniet ea sed laboriosam voluptatibus earum facilis sequi eius blanditiis id voluptatem vel, excepturi, 
+                laudantium, atque dignissimos amet est eos cumque rerum. Voluptatibus autem corrupti eos voluptate ullam 
+                saepe esse culpa? Ipsam cupiditate ut, laborum incidunt id exercitationem pariatur recusandae sequi 
+                eveniet, asperiores qui placeat cumque sit quia debitis quisquam blanditiis! Corrupti, officia nam 
+                corporis voluptatibus nesciunt porro repellendus similique quisquam consequatur, quas eius, dignissimos 
+                laborum dolor natus iste itaque hic velit at magni. Corrupti eos officia totam reiciendis dolorum natus 
+                placeat nemo at quae non quam tempora praesentium, vitae inventore. Excepturi asperiores ut ad atque eos, 
+                netur perspiciatis? Nulla impedit placeat alias eius nobis! Dolor!	
+                </p>
                 </div>
                 <div class="col-md-9 my-col"></div>
                         
@@ -141,4 +165,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+    document.getElementById("event").addEventListener("click", myfunction);
+    function myfunction(){
+    	alert("Please Post Employee Schedule.");
+    }
+    </script>
 </html>

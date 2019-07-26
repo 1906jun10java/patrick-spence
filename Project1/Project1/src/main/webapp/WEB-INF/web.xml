@@ -64,7 +64,7 @@
 		<url-pattern>/request</url-pattern>
 	</servlet-mapping>
 
-<!-- Submit page Servlet -->
+<!-- Submit request page Servlet -->
 	<servlet>
 	<description></description>
 		<display-name>Submit</display-name>
@@ -110,4 +110,51 @@
 		<url-pattern>/employeesave</url-pattern>
 	</servlet-mapping>
 
+<!-- Employee info servlet -->
+	<servlet>
+		<description></description>
+		<display-name>EmployeeInfo</display-name>
+		<servlet-name>EmployeeInfo</servlet-name>
+		<servlet-class>com.project1.servlets.EmployeeInfo</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EmployeeInfo</servlet-name>
+		<url-pattern>/employeeinfo</url-pattern>
+	</servlet-mapping>
+
+<!-- Add Reimbursement Request -->
+	<servlet>
+		<description></description>
+		<display-name>AddRequest</display-name>
+		<servlet-name>AddRequest</servlet-name>
+		<servlet-class>com.project1.servlets.AddRequest</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddRequest</servlet-name>
+		<url-pattern>/addrequest</url-pattern>
+	</servlet-mapping>
+	
+<!-- Add Employee Request -->
+	<servlet>
+		<description></description>
+		<display-name>AddEmployee</display-name>
+		<servlet-name>AddEmployee</servlet-name>
+		<servlet-class>com.project1.servlets.SaveEmployee</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddEmployee</servlet-name>
+		<url-pattern>/addemployee</url-pattern>
+	</servlet-mapping>
+
+<!-- Update Request servlet -->
+	<servlet>
+		<description></description>
+		<display-name>UpdateRequest</display-name>
+		<servlet-name>UpdateRequest</servlet-name>
+		<servlet-class>com.project1.servlets.UpdateRequest</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateRequest</servlet-name>
+		<url-pattern>/updaterequest</url-pattern>
+	</servlet-mapping>
 </web-app>

@@ -12,9 +12,9 @@ function populateEmployee() {
 		console.log(data);
 		
 		if(data.sess === null) {
-			window.location = "http://localhost:8089/Project1/companylogin"
+			window.location = "http://localhost:8089/Project1/viewemployee"
 		}else {
-			PopulateEmployee = data;
+			Employee = data;
 			document.getElementById("Employee_FN").innerText = "Employee_FN: "+Employee.Employee_FN;
 			document.getElementById("Employee_LN").innerText = "Employee_LN: "+Employee.Employee_LN;
 			document.getElementById("Employee_EM").innerText = "Employee_EM: "+Employee.Employee_EM;

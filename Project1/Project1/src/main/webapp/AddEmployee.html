@@ -51,11 +51,11 @@
     </head>
     <body>
         <nav class="nav nav-tabs navbar-expand-md navbar-dark bg-dark">
-            <a href="#" class="navbar-brand">WELCOME Employee!</a>
+            <a href="#" class="navbar-brand">WELCOME Manager!</a>
             <div class="collaspe navbar-collaspe">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Home</a>
+                    <a href="managerwelcome" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link" id="class">Schedule</a>
@@ -78,9 +78,7 @@
                     <li class="side-items">
                     <a href="#" class="side-link">Update Employee Information</a>
                     </li>
-                    <li class="side-items">
-                    <a href="addrequest" class="side-link">Submit Request Form</a>
-                    </li>
+                   
                     <li class="dropdown dropright">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="request">View Request
                             <span class="caret"></span></a>
@@ -103,35 +101,26 @@
                 </div>  
                 <div class="col-md-9 my-col">
            		<h2>Employees:</h2>
-	<p>Please insert new Employee:</p>
-	<form action="">
-		<select name="Employee" onchange="showEmployee(this.value)">
-			<option value="">Select a Employee:</option>
-			<option value="Patrick">Patrick Spence</option>
-			<option value="Jessie">Jessie Gonzales</option>
-			<option value="Giselle">Giselle Jones</option>
-		</select>
 
-	</form>
 	<br>
 	<p>ADD A NEW EMPLOYEE</p>
 	<form action="saveemployee" method="POST">
 		<table>
 			<tr>
 				<td>First Name:</td>
-				<td><input type="name" name="name" /></td>
+				<td><input type="text" name="Employee_FN" /></td>
 			</tr>
 			<tr>
 				<td>Last Name:</td>
-				<td><input type="name" name="name" /></td>
+				<td><input type="text" name="Employee_LN" /></td>
 			</tr>
 			<tr>
 				<td>Email:</td>
-				<td><input type="email" name="email" /></td>
+				<td><input type="text" name="Employee_EM" /></td>
 			</tr>
 			<tr>
 				<td>Reimbursement:</td>
-				<td><select name="Request" style="width: 150px">
+				<td><select name="Request_Id" style="width: 150px">
 						<option>Gas</option>
 						<option>Food</option>
 						<option>Hotel</option>
@@ -139,11 +128,11 @@
 			</tr>
 			<tr>
 				<td>ID:</td>
-				<td><input type="number" name="ID" /></td>
+				<td><input type="number" name="Employee_Id" /></td>
 			</tr>
 			<tr>
 				<td>Manager ID:</td>
-				<td><select name="Manager" style="width: 150px">
+				<td><select name="Manager_Id" style="width: 150px">
 						<option>Miguel Lopez : 10</option>
 						<option>Laruen Robinson : 20</option>
 						<option>Natasha Lopez: 30</option>
@@ -154,7 +143,14 @@
 			</tr>
 		</table>
 	</form>
-	<a href="View">View List of Employees</a>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
                	
                 </div>
                 <div class="col-md-9 my-col"></div>

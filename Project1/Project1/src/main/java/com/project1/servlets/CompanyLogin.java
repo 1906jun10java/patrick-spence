@@ -52,7 +52,7 @@ public class CompanyLogin extends HttpServlet{
 			session.setAttribute("problem", "invalid credentials");
 			
 			//req.getRequestDispatcher("companylogin").include(req, resp);
-			resp.sendRedirect("companylogin");
+			resp.sendRedirect("managerwelcome");
 		} 
 	}
 }
